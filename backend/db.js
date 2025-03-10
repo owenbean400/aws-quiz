@@ -21,6 +21,11 @@ const db = {
             cat.catagory[catagory].push(body);
             fs.writeFileSync("./services.json", JSON.stringify(cat,null,4));
         });
+    },
+    getHeadline: async (body, catagory) => {
+        const data = await getJsonFile('./services.json');
+        let headlines = Object.keys(data.catagory)
+        return headlines;
     }
 };
 

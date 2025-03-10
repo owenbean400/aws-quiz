@@ -14,6 +14,11 @@ const service = {
         let questions = await db.get(catagory);
         return questions;
     },
+    getCategories: async () => {
+        let catagories = await db.getHeadline();
+        catagories = catagories.filter((headline) => headline.length > 1);
+        return catagories;
+    }
 };
 
 module.exports = {

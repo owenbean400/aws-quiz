@@ -28,6 +28,15 @@ const controller = {
       res.sendStatus(500);
     }
   },
+  getCategories: async (req, res) => {
+    try {
+      let catagories = await service.getCategories();
+      res.json(catagories);
+    } catch (err) {
+      console.log("controller getQuestions...", err.message);
+      res.sendStatus(500);
+    }
+  }
 };
 
 module.exports = {
