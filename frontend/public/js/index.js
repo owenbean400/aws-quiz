@@ -3,7 +3,6 @@ function loadCatagories () {
     fetch(url)
     .then(res =>  res.json())
     .then((categories) => {
-        console.log(categories);
         let select = document.getElementById('catagories');
         let options = categories.map(catagory =>`<option value=${catagory}>${catagory}</option>`).join('\n');
         select.innerHTML = options;
