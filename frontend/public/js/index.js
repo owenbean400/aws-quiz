@@ -19,7 +19,7 @@ function getCatagories()  {
         "management_and_governance",
         "media_services",
         "migration_and_transfer",
-        "mobil",
+        "mobile",
         "networking_and_content_delivery",
         "quantum_technologies",
         "robotics",
